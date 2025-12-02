@@ -19,7 +19,7 @@ function App() {
     async function fetchCandidates() {
       try {
         const res = await fetch(
-          "http://localhost:4001/api/assessment/candidates"
+          "http://localhost:4001/api/candidates"
         );
         if (!res.ok) throw new Error("Failed to fetch candidates");
         const data = await res.json();
