@@ -10,7 +10,7 @@ export async function sendAssessmentEmail(payload) {
 }
 // API service for backend integration
 export async function generateScore(payload) {
-  const res = await fetch("http://localhost:4001/generate-score", {
+  const res = await fetch("http://localhost:4001/api/generate-score", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(payload),
@@ -20,7 +20,7 @@ export async function generateScore(payload) {
 }
 
 export async function generateFeedback(payload) {
-  const res = await fetch("http://localhost:4001/generate-feedback", {
+  const res = await fetch("http://localhost:4001/api/generate-feedback", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(payload),
