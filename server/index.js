@@ -20,7 +20,7 @@ app.use(cors());
 app.use(express.json());
 
 const assessmentRoutes = require("./routes/assessmentRoutes");
-app.use("/", assessmentRoutes);
+app.use("/api", assessmentRoutes);
 
 app.post("/api/send-email", async (req, res) => {
   const { to, subject, text, html } = req.body;
