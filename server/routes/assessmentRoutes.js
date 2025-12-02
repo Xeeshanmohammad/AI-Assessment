@@ -1,4 +1,7 @@
 // Example: Serve candidate list (replace with DB in production)
+const express = require("express");
+const router = express.Router();
+
 router.get("/candidates", (req, res) => {
   // In production, fetch from DB
   const candidates = [
@@ -8,8 +11,7 @@ router.get("/candidates", (req, res) => {
   ];
   res.json(candidates);
 });
-const express = require("express");
-const router = express.Router();
+
 const {
   generateScore,
   generateFeedback,
